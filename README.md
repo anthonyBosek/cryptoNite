@@ -6,13 +6,13 @@
 
 ## Getting started
 
-* clone repository
+- clone repository
 
 ```bash
 git clone https://github.com/Banyan-Labs/cryptonite.git
 ```
 
-* install dependencies
+- install dependencies
 
 ```bash
 npm run install-modules
@@ -60,3 +60,7 @@ npm i <packageName>
 # or
 cd client && npm i <packageName>
 ```
+
+### contributors
+
+-Anthony Bosek

@@ -1,0 +1,7 @@
+{
+    "verbose": true,
+    "ignore": ["*.test.js", "client/**/*.js"],
+    "watch": ["src"],
+    "ext": "js,json",
+    "delay": "2"
+}

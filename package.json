@@ -7,7 +7,9 @@
     "test": "ENV=test jest",
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "nodemon server.js",
-    "start:client": "cd client && npm start"
+    "start:client": "cd client && npm start",
+    "client-dep": "cd client && npm install",
+    "install-modules": "npm install && npm run client-dep"
   },
   "author": "",
   "license": "ISC",

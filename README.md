@@ -60,3 +60,6 @@ npm i <packageName>
 # or
 cd client && npm i <packageName>
 ```
+
+### contributors
+- Jamie Frazier

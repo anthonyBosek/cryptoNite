@@ -63,4 +63,5 @@ cd client && npm i <packageName>
 
 ### contributors
 
--Anthony Bosek
+- Jamie Frazier
+- Anthony Bosek

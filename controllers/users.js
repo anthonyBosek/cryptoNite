@@ -14,4 +14,4 @@ const getUser = async (req, res) => {
 
 // UPDATE ROUTES
 
-module.exports = getUser;
+module.exports = { getUser };

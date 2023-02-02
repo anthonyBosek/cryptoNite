@@ -2,14 +2,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/users");
 
 // CONFIGURATIONS
-dotenv.config();
+require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(helmet());

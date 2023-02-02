@@ -1,7 +1,7 @@
-import User from "../models/User.js";
+const User = require("../models/User.js");
 
 // READ ROUTES
-export const getUser = async (req, res) => {
+const getUser = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -13,3 +13,7 @@ export const getUser = async (req, res) => {
 };
 
 // UPDATE ROUTES
+
+module.exports = {
+  getUser,
+};

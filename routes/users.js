@@ -1,6 +1,6 @@
-import express from "express";
-import { getUser } from "../controllers/users.js";
-import { verifyToken } from "../middleware/auth.js";
+const express = require("express");
+const { getUser } = require("../controllers/users.js");
+const { verifyToken } = require("../middleware/auth.js");
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.get("/:id", verifyToken, getUser);
 
 // UPDATE ROUTES
 
-export default router;
+module.exports = router;

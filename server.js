@@ -1,6 +1,6 @@
-import http from "http";
-import app from "./app.js";
-import config from "./config/index.js";
+const http = require("http");
+const app = require("./app");
+const config = require("./config");
 
 // Normalize a port into a number, string, or false.
 function normalizePort(val) {
@@ -59,4 +59,4 @@ server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
 
-export default server;
+module.exports = server;

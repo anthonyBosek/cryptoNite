@@ -1,12 +1,12 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import cors from "cors";
-import dotenv from "dotenv";
-import helmet from "helmet";
-import morgan from "morgan";
-import authRoutes from "./routes/auth.js";
-import userRoutes from "./routes/users.js";
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/users");
 
 // CONFIGURATIONS
 dotenv.config();
@@ -34,4 +34,4 @@ mongoose
   .catch((err) => console.log(`${err} did not connect`));
 
 // LISTEN
-export default app;
+module.exports = app;

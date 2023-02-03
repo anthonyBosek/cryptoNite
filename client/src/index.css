@@ -3,8 +3,14 @@
 html,
 body,
 #root,
-.app {
+.app,
+.container {
   height: 100%;
   width: 100%;
   font-family: "Outfit", sans-serif;
+}
+
+.app {
+  display: flex;
+  position: relative;
 }

@@ -5,6 +5,9 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "theme";
 import HomePage from "views/homePage";
+import SideNav from "views/global/SideNav";
+import TopNav from "views/global/TopNav";
+import LoginPage from "views/loginPage";
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -16,9 +19,14 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-          </Routes>
+          <SideNav />
+          <main className="container">
+            <TopNav />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
+            </Routes>
+          </main>
         </ThemeProvider>
       </BrowserRouter>
     </div>

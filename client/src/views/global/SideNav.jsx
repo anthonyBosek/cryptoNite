@@ -117,7 +117,7 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="My Cryptoboard"
-              to="/"
+              to="/login"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -160,7 +160,7 @@ const Sidebar = () => {
               Tools
             </Typography>
             <Item
-              title="Top Coins"
+              title="Top Currencies"
               to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
@@ -181,7 +181,7 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="CryptoNite FAQ"
+              title="FAQ"
               to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}

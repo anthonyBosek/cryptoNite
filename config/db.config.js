@@ -26,7 +26,6 @@ const connectDB = async () => {
      * @param {Function} [callback] - callback function - optional
      * @returns {Promise<void>}
      */
-    console.log(dbUrl);
     const conn = await mongoose.connect(dbUrl, {
       useNewUrlParser: true,
       useUnifiedTopology: true,

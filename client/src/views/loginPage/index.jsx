@@ -1,11 +1,11 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { setLogin } from "state";
-//
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setLogin } from "state";
 import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
+import axios from "axios";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
@@ -40,19 +40,51 @@ const Form = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [pageType, setPageType] = useState("login");
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
-  // register api call
+  const register = async (values, onSubmitProps) => {
+    const data = { ...values, accounts: [] }; // add empty accounts array
 
-  // login api call
+    const savedUserResponse = await axios({
+      method: "POST",
+      url: "http://localhost:5000/auth/register",
+      data,
+    });
+    const savedUser = await savedUserResponse.data;
+    onSubmitProps.resetForm();
 
-  // handle form submit
-  const handleFormSubmit = (values) => {
-    console.log(values);
+    if (savedUser) {
+      setPageType("login");
+    }
+  };
+
+  const login = async (values, onSubmitProps) => {
+    const loggedInResponse = await axios({
+      method: "POST",
+      url: "http://localhost:5000/auth/login",
+      headers: { "Content-Type": "application/json" },
+      data: JSON.stringify(values),
+    });
+    const loggedIn = await loggedInResponse.data;
+    onSubmitProps.resetForm();
+    if (loggedIn) {
+      dispatch(
+        setLogin({
+          user: loggedIn.user,
+          token: loggedIn.token,
+        })
+      );
+      navigate("/user");
+    }
+  };
+
+  const handleFormSubmit = async (values, onSubmitProps) => {
+    if (isLogin) await login(values, onSubmitProps);
+    if (isRegister) await register(values, onSubmitProps);
   };
 
   return (

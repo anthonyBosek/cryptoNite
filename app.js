@@ -24,9 +24,10 @@ app.use("/users", userRoutes);
 
 // MONGOOSE SETUP
 // console.log(process.env.MONGO_URI);
+const db = process.env.MONGO_URI || "mongodb://localhost/cryptonite";
 mongoose.set("strictQuery", false); // not to show deprecation warning
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

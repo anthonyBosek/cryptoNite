@@ -11,7 +11,6 @@ const connectDB = async () => {
 
     //* if our runtime env is testing then we'll change our connection strategy
     if (config.NODE_ENV === "test") {
-
       //* create a temp mock mongo server in runtime
       mongoDB = await MongoMemoryServer.create();
 
@@ -20,14 +19,14 @@ const connectDB = async () => {
     }
     mongoose.set("strictQuery", true); //* upcoming deprecation warning in future release, set strictQuery to true before connecting
 
-
-   /**
-    * @function import('mongoose').connect - connection promise
-    * @param {string} uri - uri to connect to - required
-    * @param {object} [options] - connection options - optional
-    * @param {Function} [callback] - callback function - optional
-    * @returns {Promise<void>}
-    */
+    /**
+     * @function import('mongoose').connect - connection promise
+     * @param {string} uri - uri to connect to - required
+     * @param {object} [options] - connection options - optional
+     * @param {Function} [callback] - callback function - optional
+     * @returns {Promise<void>}
+     */
+    console.log(dbUrl);
     const conn = await mongoose.connect(dbUrl, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -36,7 +35,6 @@ const connectDB = async () => {
     //* log connection info if not in test env
     if (config.NODE_ENV !== "test")
       console.log(`MongoDB connected: ${conn.connection.host}`);
-
   } catch (err) {
     //* log error if not in test env else throw error
     if (config.NODE_ENV !== "test") {

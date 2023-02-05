@@ -4,9 +4,6 @@ const User = require("../models/User.js");
 
 // REGISTER USER
 const register = async (req, res) => {
-  // console.log("method", req.method);
-  // console.log("url", req.url);
-  // res.json({ msg: "register" });
   try {
     const { firstName, lastName, email, password, location, accounts } =
       req.body;
@@ -40,8 +37,8 @@ const login = async (req, res) => {
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials." });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-    delete user.password;
-    res.status(200).json({ token, user });
+    const userWithoutPassword = { ...user.toObject(), password: undefined };
+    res.status(200).json({ token, user: userWithoutPassword });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

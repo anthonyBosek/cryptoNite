@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -13,7 +14,7 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-//import Logo from ""
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -35,6 +36,8 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const user = useSelector((state) => state.user);
+  console.log(user);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
@@ -89,14 +92,25 @@ const Sidebar = () => {
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
-                <img
-                  alt="profile-user"
-                  width="100px"
-                  height="100px"
-                  src={`../../assets/cryptoNitecanva.png`}
-                  // src={`../../assets/logo.jpg`}
-                  style={{ cursor: "pointer", borderRadius: "50%" }}
-                />
+                {user ? (
+                  <img
+                    alt="avatar"
+                    width="100px"
+                    height="100px"
+                    src={`../../assets/avatar.jpg`}
+                    style={{
+                      cursor: "pointer",
+                      borderRadius: "50%",
+                    }}
+                  />
+                ) : (
+                  <img
+                    alt="logo"
+                    width="110px"
+                    height="110px"
+                    src={`../../assets/logo.png`}
+                  />
+                )}
               </Box>
               <Box textAlign="center">
                 <Typography
@@ -105,10 +119,10 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Welcome
+                  {user ? `${user.firstName} ${user.lastName}` : "Welcome"}
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  {new Date().toLocaleDateString()}
+                  {user ? `${user.location}` : new Date().toLocaleDateString()}
                 </Typography>
               </Box>
             </Box>

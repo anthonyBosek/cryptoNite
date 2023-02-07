@@ -2,7 +2,7 @@
 export const tokens = (mode) => ({
   ...(mode === "dark"
     ? {
-        cryptonite: "#d7ea15",
+        cryptonite: "#b6ff10",
         grey: {
           100: "#e0e0e0",
           200: "#c2c2c2",
@@ -60,7 +60,7 @@ export const tokens = (mode) => ({
         },
       }
     : {
-        cryptonite: "#d7ea15",
+        cryptonite: "#2aa107",
         grey: {
           100: "#141414",
           200: "#292929",

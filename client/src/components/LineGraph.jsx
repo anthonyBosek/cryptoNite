@@ -55,7 +55,7 @@ const LineGraph = () => {
   return (
     <>
       <div>LineGraph</div>
-      {/* {console.log(coinHistory)} */}
+      {console.log(coinHistory)}
     </>
   );
 };

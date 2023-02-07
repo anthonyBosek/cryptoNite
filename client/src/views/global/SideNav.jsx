@@ -160,7 +160,7 @@ const Sidebar = () => {
             />
             <Item
               title="CryptoNite News"
-              to="/news"
+              to="/newsFeed"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

@@ -26,6 +26,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
+             
               <Route
                 path="/user"
                 element={isAuth ? <Dashboard /> : <Navigate to="/" />}

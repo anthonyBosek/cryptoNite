@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
 
 const NewsCard = (props) => {
     const {title, source, url} = props.feed

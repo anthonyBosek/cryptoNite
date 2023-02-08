@@ -36,6 +36,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const mode = useSelector((state) => state.mode);
   const user = useSelector((state) => state.user);
   console.log(user);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -79,9 +80,15 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.cryptonite}>
-                  cryptoNite
-                </Typography>
+                <img
+                  src={
+                    mode === "dark"
+                      ? "../../assets/titleDark.png"
+                      : "../../assets/titleLight.png"
+                  }
+                  alt="title"
+                  width="75%"
+                />
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
@@ -92,25 +99,18 @@ const Sidebar = () => {
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
-                {user ? (
-                  <img
-                    alt="avatar"
-                    width="100px"
-                    height="100px"
-                    src={`../../assets/avatar.jpg`}
-                    style={{
-                      cursor: "pointer",
-                      borderRadius: "50%",
-                    }}
-                  />
-                ) : (
-                  <img
-                    alt="logo"
-                    width="110px"
-                    height="110px"
-                    src={`../../assets/logo.png`}
-                  />
-                )}
+                <img
+                  alt="avatar"
+                  width="100px"
+                  height="100px"
+                  src={
+                    user ? "../../assets/avatar.jpg" : "../../assets/logo.png"
+                  }
+                  style={{
+                    cursor: "pointer",
+                    borderRadius: "50%",
+                  }}
+                />
               </Box>
               <Box textAlign="center">
                 <Typography

@@ -1,14 +1,11 @@
-import { Typography } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { setLogout } from "state";
+import { Box } from "@mui/material";
+import Header from "components/Header";
 
 const Dashboard = () => {
-  const dispatch = useDispatch();
   return (
-    <div>
-      <Typography>Dashboard</Typography>
-      <button onClick={() => dispatch(setLogout())}>Log Out</button>
-    </div>
+    <Box m="20px">
+      <Header title="Dashboard" subtitle="Your CryptoNite Accounts" />
+    </Box>
   );
 };
 

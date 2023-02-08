@@ -44,8 +44,7 @@ const HomePage = () => {
   
   )
 
+
 };
 
 export default HomePage;
-// I made different background shades so you could see the
-// individual sections

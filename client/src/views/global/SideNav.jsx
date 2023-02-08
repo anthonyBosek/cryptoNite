@@ -38,7 +38,6 @@ const Sidebar = () => {
   const colors = tokens(theme.palette.mode);
   const mode = useSelector((state) => state.mode);
   const user = useSelector((state) => state.user);
-  console.log(user);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
@@ -108,7 +107,7 @@ const Sidebar = () => {
                   }
                   style={{
                     cursor: "pointer",
-                    borderRadius: "50%",
+                    borderRadius: user ? "50%" : "0",
                   }}
                 />
               </Box>

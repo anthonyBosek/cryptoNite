@@ -41,8 +41,7 @@ const NewsFeed = () => {
    
     }
     }, []);
-    console.log(feed)
-    console.log(isLoading)
+    
     return(
         <div>
         <h1> NEWS FEED</h1>

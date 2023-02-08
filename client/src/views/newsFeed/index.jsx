@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
-import { Formik } from "formik";
-import * as yup from "yup";
-import axios from "axios";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { tokens } from "../../theme";
-import Header from "../../components/Header";
 import NewsCard from "./NewsCard";
+import axios from "axios";
+// import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
+// import { Formik } from "formik";
+// import * as yup from "yup";
+// import useMediaQuery from "@mui/material/useMediaQuery";
+// import { tokens } from "../../theme";
+// import Header from "../../components/Header";
 
 
 const NewsFeed = () => {

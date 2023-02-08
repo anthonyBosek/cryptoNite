@@ -38,7 +38,7 @@ const NewsFeed = () => {
    
 
     }
-    }, []);
+    },);
     
     return(
         <div>

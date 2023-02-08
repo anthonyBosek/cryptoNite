@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import NewsCard from "./NewsCard";
+import NewsCard from "./feedComponents/NewsCard";
 import axios from "axios";
 // import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
 // import { Formik } from "formik";

@@ -6,7 +6,7 @@ import axios from "axios";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import NewsCard from './NewsCard'
+import NewsCard from "./NewsCard";
 
 
 const NewsFeed = () => {

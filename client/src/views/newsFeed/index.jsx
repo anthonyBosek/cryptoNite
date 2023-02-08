@@ -1,7 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setLogin } from "state";
 import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -39,7 +36,7 @@ const NewsFeed = () => {
         console.error(error);
     });
    
-    
+
     }
     }, []);
     

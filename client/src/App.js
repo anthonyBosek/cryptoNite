@@ -9,6 +9,7 @@ import SideNav from "views/global/SideNav";
 import TopNav from "views/global/TopNav";
 import LoginPage from "views/loginPage";
 import Dashboard from "views/dashboard";
+import NewsFeed from 'views/newsFeed';
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -26,10 +27,14 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/newsFeed" element={<NewsFeed />} />
+              
+             
               <Route
                 path="/user"
                 element={isAuth ? <Dashboard /> : <Navigate to="/" />}
-              />
+              >
+                </Route>
             </Routes>
           </main>
         </ThemeProvider>

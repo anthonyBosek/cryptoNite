@@ -39,6 +39,7 @@ const NewsFeed = () => {
         console.error(error);
     });
    
+    
     }
     }, []);
     

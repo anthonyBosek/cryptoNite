@@ -12,7 +12,7 @@ import axios from "axios";
 const NewsFeed = () => {
     
     const [feed,setFeed] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
     const options = {
         method: 'GET',
         url: 'https://crypto-news34.p.rapidapi.com/news/cryptonews',
@@ -26,10 +26,10 @@ const NewsFeed = () => {
     const runOnce = useRef(false);
     useEffect(() => {
     if (runOnce.current === false){
-        setIsLoading(true)
+        // setIsLoading(true)
     runOnce.current = true;
     axios.request(options).then(function (res) {
-        setIsLoading(false)
+        // setIsLoading(false)
         setFeed(res.data)
         console.log(feed);
     }).catch(function (error) {

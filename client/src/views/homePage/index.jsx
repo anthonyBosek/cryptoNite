@@ -76,7 +76,7 @@ const HomePage = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                View Recent Fluctuations
+                View Recent Fluctuations Daily
               </Typography>
               <Typography
                 variant="h3"
@@ -117,7 +117,7 @@ const HomePage = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                View Recent Fluctuations
+                View Recent Fluctuations Around The World
               </Typography>
               <Typography
                 variant="h3"

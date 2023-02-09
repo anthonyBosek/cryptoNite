@@ -2,7 +2,7 @@ import { tokens } from "../theme";
 
 export const mockBarData = [
   {
-    country: "02/01",
+    country: "USA",
     "Bit Coin": 137,
     "Bit CoinColor": "hsl(229, 70%, 50%)",
     Uniswap: 96,
@@ -13,7 +13,7 @@ export const mockBarData = [
     EthereumColor: "hsl(340, 70%, 50%)",
   },
   {
-    country: "02/02",
+    country: "Kenya",
     "Bit Coin": 55,
     "Bit CoinColor": "hsl(307, 70%, 50%)",
     Uniswap: 28,
@@ -24,7 +24,7 @@ export const mockBarData = [
     EthereumColor: "hsl(275, 70%, 50%)",
   },
   {
-    country: "02/03",
+    country: "Austria",
     "Bit Coin": 109,
     "Bit CoinColor": "hsl(72, 70%, 50%)",
     Uniswap: 23,
@@ -35,7 +35,7 @@ export const mockBarData = [
     EthereumColor: "hsl(256, 70%, 50%)",
   },
   {
-    country: "02/04",
+    country: "France",
     "Bit Coin": 133,
     "Bit CoinColor": "hsl(257, 70%, 50%)",
     Uniswap: 52,
@@ -46,7 +46,7 @@ export const mockBarData = [
     EthereumColor: "hsl(9, 70%, 50%)",
   },
   {
-    country: "02/05",
+    country: "Brazil",
     "Bit Coin": 81,
     "Bit CoinColor": "hsl(190, 70%, 50%)",
     Uniswap: 80,
@@ -57,7 +57,7 @@ export const mockBarData = [
     EthereumColor: "hsl(285, 70%, 50%)",
   },
   {
-    country: "02/06",
+    country: "India",
     "Bit Coin": 66,
     "Bit CoinColor": "hsl(208, 70%, 50%)",
     Uniswap: 111,
@@ -68,7 +68,7 @@ export const mockBarData = [
     EthereumColor: "hsl(76, 70%, 50%)",
   },
   {
-    country: "02/07",
+    country: "China",
     "Bit Coin": 80,
     "Bit CoinColor": "hsl(87, 70%, 50%)",
     Uniswap: 47,

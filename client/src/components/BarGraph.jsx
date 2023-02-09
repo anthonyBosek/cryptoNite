@@ -39,7 +39,7 @@ const BarGraph = ({ isDashboard = false }) => {
           },
         },
       }}
-      keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
+      keys={["Bit Coin", "Uniswap", "Theta", "Doge", "Ripple", "Ethereum"]}
       indexBy="country"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}

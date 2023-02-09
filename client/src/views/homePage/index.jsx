@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Box, useTheme, Button, Typography } from "@mui/material";
-import BarGraph from "components/BarGraph"
+import BarGraph from "components/BarGraph";
 import Header from "components/Header";
 import { tokens } from "../../theme";
 import LineGraph from "components/LineGraph";
@@ -16,30 +16,39 @@ const HomePage = () => {
 
   return (
     <Box m="20px">
-      <Header title="Welcome to cryptoNite - Your one stop for all things crypto"
-        subtitle="Greetings..." />
+      <Header
+        title="Welcome to cryptoNite - Your one stop for all things crypto"
+        subtitle="Greetings..."
+      />
       <Box
         gridColumn="span 12"
         gridRow="span 2"
         backgroundColor={colors.primary[400]}
       >
-
-        <Button 
-        variant="contained" 
-        sx={{ width: '49%', margin: theme.spacing(1), backgroundColor: colors.greenAccent[600] }} 
-        onClick={ () => {
-          dispatch(setRegister(false))
-          navigate("/login")
-        }} 
-        >Login</Button>
-        <Button 
-        variant="contained" 
-        sx={{ width: '49%', backgroundColor: colors.blueAccent[700] }}
-        onClick={ () => {
-          dispatch(setRegister(true))
-          navigate("/login")
-        }} 
-        >Register</Button>
+        <Button
+          variant="contained"
+          sx={{
+            width: "49%",
+            margin: theme.spacing(1),
+            backgroundColor: colors.greenAccent[600],
+          }}
+          onClick={() => {
+            dispatch(setRegister(false));
+            navigate("/login");
+          }}
+        >
+          Login
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ width: "49%", backgroundColor: colors.blueAccent[700] }}
+          onClick={() => {
+            dispatch(setRegister(true));
+            navigate("/login");
+          }}
+        >
+          Register
+        </Button>
       </Box>
 
       <Box
@@ -125,7 +134,6 @@ const HomePage = () => {
         </Box>
       </Box>
     </Box>
-    
   );
 };
 

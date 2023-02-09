@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setLogin } from "state";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogin, setRegister } from "state";
 import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -39,12 +38,10 @@ const initialValuesLogin = {
 const Form = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [pageType, setPageType] = useState("login");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width:600px)");
-  const isLogin = pageType === "login";
-  const isRegister = pageType === "register";
+  const isRegister = useSelector((state) => state.register);
 
   const register = async (values, onSubmitProps) => {
     const data = { ...values, accounts: [] }; // add empty accounts array
@@ -58,7 +55,7 @@ const Form = () => {
     onSubmitProps.resetForm();
 
     if (savedUser) {
-      setPageType("login");
+      dispatch(setRegister(false));
     }
   };
 
@@ -83,8 +80,8 @@ const Form = () => {
   };
 
   const handleFormSubmit = async (values, onSubmitProps) => {
-    if (isLogin) await login(values, onSubmitProps);
     if (isRegister) await register(values, onSubmitProps);
+    else await login(values, onSubmitProps);
   };
 
   return (
@@ -97,8 +94,8 @@ const Form = () => {
 
       <Formik
         onSubmit={handleFormSubmit}
-        initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
-        validationSchema={isLogin ? loginSchema : registerSchema}
+        initialValues={isRegister ? initialValuesRegister : initialValuesLogin}
+        validationSchema={isRegister ? registerSchema : loginSchema}
       >
         {({
           values,
@@ -107,7 +104,6 @@ const Form = () => {
           handleBlur,
           handleChange,
           handleSubmit,
-          setFieldValue,
           resetForm,
         }) => (
           <form onSubmit={handleSubmit}>
@@ -197,15 +193,15 @@ const Form = () => {
             {/* BUTTONS */}
             <Box display="flex" justifyContent="space-between" mt="20px">
               <Button type="submit" color={"secondary"} variant="contained">
-                {isLogin
-                  ? "Login CryptoNite Member"
-                  : "Register CryptoNite Profile"}
+                {isRegister
+                  ? "Register CryptoNite Profile"
+                  : "Login CryptoNite Member"}
               </Button>
               <Typography
                 variant="h5"
                 mr="20px"
                 onClick={() => {
-                  setPageType(isLogin ? "register" : "login");
+                  dispatch(setRegister(isRegister ? false : true));
                   resetForm();
                 }}
                 color={colors.blueAccent[400]}
@@ -216,9 +212,9 @@ const Form = () => {
                   },
                 }}
               >
-                {isLogin
-                  ? "Create New CryptoNite Profile"
-                  : "Login Existing CryptoNite Member"}
+                {isRegister
+                  ? "Login Existing CryptoNite Member"
+                  : "Create New CryptoNite Profile"}
               </Typography>
             </Box>
           </form>

@@ -110,7 +110,7 @@ const Sidebar = () => {
                     cursor: "pointer",
                     borderRadius: user ? "50%" : "0",
                   }}
-                  onClick={() => navigate("/")}
+                  onClick={() => (user ? navigate("/user") : navigate("/"))}
                 />
               </Box>
               <Box textAlign="center">

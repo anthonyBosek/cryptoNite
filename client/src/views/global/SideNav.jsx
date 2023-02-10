@@ -146,21 +146,21 @@ const Sidebar = () => {
               Views
             </Typography>
             <Item
-              title="CryptoNite Community"
+              title="cryptoNite Community"
               to="/community"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="CryptoNite Chat"
+              title="cryptoNite Chat"
               to="/chat"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="CryptoNite News"
+              title="cryptoNite News"
               to="/newsFeed"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}

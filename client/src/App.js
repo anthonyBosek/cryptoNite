@@ -10,8 +10,9 @@ import HomePage from "views/homePage";
 import LoginPage from "views/loginPage";
 import Dashboard from "views/dashboard";
 import NewsFeed from "views/newsFeed";
-import GreatestGainer from "views/greatestGainer";
 import TopCurrencies from "views/topCurrencies";
+import MarketBreakdown from "views/marketBreakdown";
+import GreatestGainer from "views/greatestGainer";
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -30,8 +31,9 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/newsFeed" element={<NewsFeed />} />
-              <Route path="/greatestGainer" element={<GreatestGainer />} />
               <Route path="/topCurrencies" element={<TopCurrencies />} />
+              <Route path="/marketBreakdown" element={<MarketBreakdown />} />
+              <Route path="/greatestGainer" element={<GreatestGainer />} />
               <Route
                 path="/user"
                 element={isAuth ? <Dashboard /> : <Navigate to="/" />}

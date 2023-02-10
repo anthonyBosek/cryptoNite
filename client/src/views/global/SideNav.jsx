@@ -183,13 +183,13 @@ const Sidebar = () => {
             />
             <Item
               title="Market Breakdown"
-              to="/pie"
+              to="/marketBreakdown"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Greatest Gainer"
+              title="Greatest Gainers"
               to="/greatestGainer"
               icon={<TimelineOutlinedIcon />}
               selected={selected}

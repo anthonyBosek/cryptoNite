@@ -5,7 +5,7 @@ import BarGraph from "../../components/BarGraph";
 const TopCurrencies = () => {
   return (
     <Box m="20px">
-      <Header title="Bar Chart" subtitle="Simple Bar Chart" />
+      <Header title="Top Currencies" subtitle="Cryptonites Top Choices 2023" />
       <Box height="75vh">
         <BarGraph />
       </Box>

@@ -17,13 +17,13 @@ const HomePage = () => {
   return (
     <Box m="20px">
       <Header
-        title="Welcome to cryptoNite - Your one stop for all things crypto"
-        subtitle="Greetings..."
+        title="Welcome to cryptoNite"
+        subtitle="Your one stop for all things crypto!"
       />
       <Box
         gridColumn="span 12"
         gridRow="span 2"
-        backgroundColor={colors.primary[400]}
+        // backgroundColor={colors.primary[400]}
       >
         <Button
           variant="contained"
@@ -76,14 +76,14 @@ const HomePage = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                View Recent Fluctuations
+                Recent Fluctuations
               </Typography>
               <Typography
                 variant="h3"
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                Of Your Preffered Currencies
+                Cryptonites Top Currencies
               </Typography>
             </Box>
           </Box>
@@ -117,14 +117,14 @@ const HomePage = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                View Recent Fluctuations
+                Top 5 At A Glance
               </Typography>
               <Typography
                 variant="h3"
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                Of Your Preffered Currencies
+                CryptoNites Most Lucrative Returns
               </Typography>
             </Box>
           </Box>

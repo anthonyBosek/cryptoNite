@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
@@ -36,9 +36,9 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
   const mode = useSelector((state) => state.mode);
   const user = useSelector((state) => state.user);
-  console.log(user);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
@@ -108,8 +108,9 @@ const Sidebar = () => {
                   }
                   style={{
                     cursor: "pointer",
-                    borderRadius: "50%",
+                    borderRadius: user ? "50%" : "0",
                   }}
+                  onClick={() => (user ? navigate("/user") : navigate("/"))}
                 />
               </Box>
               <Box textAlign="center">
@@ -131,7 +132,7 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="My Cryptoboard"
-              to="/login"
+              to={user ? "/user" : "/login"}
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -160,7 +161,7 @@ const Sidebar = () => {
             />
             <Item
               title="CryptoNite News"
-              to="/news"
+              to="/newsFeed"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -175,7 +176,7 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Top Currencies"
-              to="/bar"
+              to="/topCurrencies"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -189,7 +190,7 @@ const Sidebar = () => {
             />
             <Item
               title="Greatest Gainer"
-              to="/line"
+              to="/greatestGainer"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

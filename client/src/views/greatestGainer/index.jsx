@@ -6,8 +6,8 @@ const GreatestGainer = () => {
   return (
     <Box m="20px">
       <Header
-        title="Greatest Gainer"
-        subtitle="CryptoNites Greatest Gainer past 7 days"
+        title="Greatest Gainers"
+        subtitle="CryptoNites Greatest Gainers - past 7 days"
       />
       <Box height="75vh">
         <LineGraph />

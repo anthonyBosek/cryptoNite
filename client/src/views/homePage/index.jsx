@@ -83,7 +83,7 @@ const HomePage = () => {
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                Cryptonites Top Currencies
+                cryptoNites Top Currencies
               </Typography>
             </Box>
           </Box>
@@ -124,7 +124,7 @@ const HomePage = () => {
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                CryptoNites Most Lucrative Returns
+                cryptoNites Most Lucrative Returns
               </Typography>
             </Box>
           </Box>

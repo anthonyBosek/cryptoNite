@@ -87,9 +87,9 @@ const Form = () => {
   return (
     <Box m="20px">
       {isRegister ? (
-        <Header title="Register" subtitle="New CryptoNite Profile" />
+        <Header title="Register" subtitle="New cryptoNite Profile" />
       ) : (
-        <Header title="Login" subtitle="Existing CryptoNite Member" />
+        <Header title="Login" subtitle="Existing cryptoNite Member" />
       )}
 
       <Formik
@@ -194,8 +194,8 @@ const Form = () => {
             <Box display="flex" justifyContent="space-between" mt="20px">
               <Button type="submit" color={"secondary"} variant="contained">
                 {isRegister
-                  ? "Register CryptoNite Profile"
-                  : "Login CryptoNite Member"}
+                  ? "Register cryptoNite Profile"
+                  : "Login cryptoNite Member"}
               </Button>
               <Typography
                 variant="h5"
@@ -213,8 +213,8 @@ const Form = () => {
                 }}
               >
                 {isRegister
-                  ? "Login Existing CryptoNite Member"
-                  : "Create New CryptoNite Profile"}
+                  ? "Login Existing cryptoNite Member"
+                  : "Create New cryptoNite Profile"}
               </Typography>
             </Box>
           </form>

@@ -20,7 +20,7 @@ const BarGraph = ({ isDashboard = false }) => {
           },
           legend: {
             text: {
-              fill: colors.grey[100],
+              fill: colors.grey[200],
             },
           },
           ticks: {
@@ -39,13 +39,20 @@ const BarGraph = ({ isDashboard = false }) => {
           },
         },
       }}
-      keys={["Bit Coin", "Uniswap", "Theta", "Doge", "Ripple", "Ethereum"]}
+      keys={["Bit Coin", "Uniswap", "Doge", "Ethereum", "Ripple"]}
       indexBy="country"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
-      colors={{ scheme: "nivo" }}
+      // colors={[ colors.grey[200],colors.blueAccent[500],colors.greenAccent[500],colors.redAccent[300] ]}
+      colors={[
+        tokens("dark").greenAccent[500],
+        tokens("dark").blueAccent[300],
+        tokens("dark").redAccent[200],
+        "#a3b9c9",
+        "#abdae1",
+      ]}
       defs={[
         {
           id: "dots",
@@ -67,7 +74,7 @@ const BarGraph = ({ isDashboard = false }) => {
         },
       ]}
       borderColor={{
-        from: "color",
+        from: "colors",
         modifiers: [["darker", "1.6"]],
       }}
       axisTop={null}
@@ -97,7 +104,7 @@ const BarGraph = ({ isDashboard = false }) => {
       }}
       legends={[
         {
-          dataFrom: "keys",
+          dataFrom: "country",
           anchor: "bottom-right",
           direction: "column",
           justify: false,

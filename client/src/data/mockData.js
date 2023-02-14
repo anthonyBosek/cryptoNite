@@ -4,7 +4,7 @@ export const mockBarData = [
   {
     country: "USA",
     "Bit Coin": 137,
-    "Bit CoinColor": "hsl(229, 70%, 50%)",
+    BitCoinColor: "#3da58a",
     Uniswap: 96,
     UniswapColor: "hsl(296, 70%, 50%)",
     Doge: 72,
@@ -15,7 +15,7 @@ export const mockBarData = [
   {
     country: "Kenya",
     "Bit Coin": 55,
-    "Bit CoinColor": "hsl(307, 70%, 50%)",
+    BitCoinColor: "hsl(307, 70%, 50%)",
     Uniswap: 28,
     UniswapColor: "hsl(111, 70%, 50%)",
     Doge: 58,
@@ -26,7 +26,7 @@ export const mockBarData = [
   {
     country: "Austria",
     "Bit Coin": 109,
-    "Bit CoinColor": "hsl(72, 70%, 50%)",
+    BitCoinColor: "hsl(72, 70%, 50%)",
     Uniswap: 23,
     UniswapColor: "hsl(96, 70%, 50%)",
     Doge: 34,
@@ -37,7 +37,7 @@ export const mockBarData = [
   {
     country: "France",
     "Bit Coin": 133,
-    "Bit CoinColor": "hsl(257, 70%, 50%)",
+    BitCoinColor: "hsl(257, 70%, 50%)",
     Uniswap: 52,
     UniswapColor: "hsl(326, 70%, 50%)",
     Doge: 43,
@@ -48,7 +48,7 @@ export const mockBarData = [
   {
     country: "Brazil",
     "Bit Coin": 81,
-    "Bit CoinColor": "hsl(190, 70%, 50%)",
+    BitCoinColor: "hsl(190, 70%, 50%)",
     Uniswap: 80,
     UniswapColor: "hsl(325, 70%, 50%)",
     Doge: 112,
@@ -59,7 +59,7 @@ export const mockBarData = [
   {
     country: "India",
     "Bit Coin": 66,
-    "Bit CoinColor": "hsl(208, 70%, 50%)",
+    BitCoinColor: "hsl(208, 70%, 50%)",
     Uniswap: 111,
     UniswapColor: "hsl(334, 70%, 50%)",
     Doge: 167,
@@ -70,7 +70,7 @@ export const mockBarData = [
   {
     country: "China",
     "Bit Coin": 80,
-    "Bit CoinColor": "hsl(87, 70%, 50%)",
+    BitCoinColor: "hsl(87, 70%, 50%)",
     Uniswap: 47,
     UniswapColor: "hsl(141, 70%, 50%)",
     Doge: 158,
@@ -106,8 +106,8 @@ export const mockPieData = [
     color: "hsl(229, 70%, 50%)",
   },
   {
-    id: "Bitcoin",
-    label: "Bitcoin",
+    id: "BitcoinColor",
+    label: "BitcoinColor",
     value: 584,
     color: "hsl(344, 70%, 50%)",
   },
@@ -115,7 +115,7 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "bitCoin",
+    id: "bitCoinColor",
     color: tokens("dark").greenAccent[500],
     data: [
       {

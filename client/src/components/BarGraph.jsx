@@ -83,7 +83,7 @@ const BarGraph = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "country", // changed
+        legend: isDashboard ? undefined : "Largest Countries by Population", // changed
         legendPosition: "middle",
         legendOffset: 32,
       }}
@@ -91,7 +91,7 @@ const BarGraph = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "food", // changed
+        legend: isDashboard ? undefined : "Price Breakdown of Greatest Gainers", // changed
         legendPosition: "middle",
         legendOffset: -40,
       }}

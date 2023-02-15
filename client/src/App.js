@@ -9,6 +9,8 @@ import TopNav from "views/global/TopNav";
 import HomePage from "views/homePage";
 import LoginPage from "views/loginPage";
 import Dashboard from "views/dashboard";
+import Community from "views/community";
+import Chat from "views/chat";
 import NewsFeed from "views/newsFeed";
 import TopCurrencies from "views/topCurrencies";
 import MarketBreakdown from "views/marketBreakdown";
@@ -30,6 +32,8 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/chat" element={<Chat />} />
               <Route path="/newsFeed" element={<NewsFeed />} />
               <Route path="/topCurrencies" element={<TopCurrencies />} />
               <Route path="/marketBreakdown" element={<MarketBreakdown />} />

@@ -101,7 +101,7 @@ const HomePage = () => {
       >
         <Box
           gridColumn="span 12"
-          gridRow="span 2"
+          gridRow="span 3"
           backgroundColor={colors.primary[400]}
         >
           <Box
@@ -128,7 +128,7 @@ const HomePage = () => {
               </Typography>
             </Box>
           </Box>
-          <Box height="250px" m="-20px 0 0 0">
+          <Box height="90%" m="-20px 0 0 0">
             <BarGraph isDashboard={true} />
           </Box>
         </Box>

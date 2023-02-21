@@ -38,6 +38,13 @@ const BarGraph = ({ isDashboard = false }) => {
             fill: colors.grey[100],
           },
         },
+        tooltip: {
+          container: {
+            background: "#ffffff",
+            color: "#333333",
+            fontSize: 12,
+          },
+        },
       }}
       keys={["Bit Coin", "Uniswap", "Doge", "Ethereum", "Ripple"]}
       indexBy="country"
@@ -48,7 +55,7 @@ const BarGraph = ({ isDashboard = false }) => {
       // colors={[ colors.grey[200],colors.blueAccent[500],colors.greenAccent[500],colors.redAccent[300] ]}
       colors={[
         tokens("dark").greenAccent[500],
-        tokens("dark").blueAccent[300],
+        tokens("dark").blueAccent[400],
         tokens("dark").redAccent[200],
         "#a3b9c9",
         "#abdae1",

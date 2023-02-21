@@ -106,8 +106,8 @@ export const mockPieData = [
     color: "hsl(229, 70%, 50%)",
   },
   {
-    id: "BitcoinColor",
-    label: "BitcoinColor",
+    id: "Bitcoin",
+    label: "Bitcoin",
     value: 584,
     color: "hsl(344, 70%, 50%)",
   },

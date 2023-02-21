@@ -36,6 +36,13 @@ const PieGraph = () => {
             fill: colors.grey[100],
           },
         },
+        tooltip: {
+          container: {
+            background: "#ffffff",
+            color: "#333333",
+            fontSize: 12,
+          },
+        },
       }}
       margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
       innerRadius={0.5}
@@ -46,8 +53,15 @@ const PieGraph = () => {
         from: "color",
         modifiers: [["darker", 0.2]],
       }}
+      colors={[
+        tokens("dark").greenAccent[500],
+        tokens("dark").blueAccent[300],
+        tokens("dark").redAccent[200],
+        tokens("dark").blueAccent[500],
+        "#abdae1",
+      ]}
       arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor={colors.grey[100]}
+      arcLinkLabelsTextColor={colors.grey[200]}
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: "color" }}
       enableArcLabels={false}
@@ -87,19 +101,19 @@ const PieGraph = () => {
           itemsSpacing: 0,
           itemWidth: 100,
           itemHeight: 18,
-          itemTextColor: "#999",
+          itemTextColor: colors.grey[200],
           itemDirection: "left-to-right",
           itemOpacity: 1,
           symbolSize: 18,
           symbolShape: "circle",
-          effects: [
-            {
-              on: "hover",
-              style: {
-                itemTextColor: "#000",
-              },
-            },
-          ],
+          // effects: [
+          //   {
+          //     on: "hover",
+          //     style: {
+          //       itemTextColor: "#000",
+          //     },
+          //   },
+          // ],
         },
       ]}
     />

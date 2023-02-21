@@ -15,6 +15,7 @@ import NewsFeed from "views/newsFeed";
 import TopCurrencies from "views/topCurrencies";
 import MarketBreakdown from "views/marketBreakdown";
 import GreatestGainer from "views/greatestGainer";
+import FAQ from "views/faq";
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -38,6 +39,7 @@ function App() {
               <Route path="/topCurrencies" element={<TopCurrencies />} />
               <Route path="/marketBreakdown" element={<MarketBreakdown />} />
               <Route path="/greatestGainer" element={<GreatestGainer />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route
                 path="/user"
                 element={isAuth ? <Dashboard /> : <Navigate to="/" />}

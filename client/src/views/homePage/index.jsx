@@ -23,14 +23,19 @@ const HomePage = () => {
       <Box
         gridColumn="span 12"
         gridRow="span 2"
+        display="flex"
+        justifyContent="space-evenly"
         // backgroundColor={colors.primary[400]}
       >
         <Button
           variant="contained"
           sx={{
-            width: "49%",
-            margin: theme.spacing(1),
-            backgroundColor: colors.greenAccent[600],
+            width: "45%",
+            backgroundColor: colors.greenAccent[500],
+            "&:hover": {
+              color: colors.grey[100],
+              backgroundColor: colors.greenAccent[700],
+            },
           }}
           onClick={() => {
             dispatch(setRegister(false));
@@ -41,7 +46,14 @@ const HomePage = () => {
         </Button>
         <Button
           variant="contained"
-          sx={{ width: "49%", backgroundColor: colors.blueAccent[700] }}
+          sx={{
+            width: "45%",
+            backgroundColor: colors.blueAccent[500],
+            "&:hover": {
+              color: colors.grey[100],
+              backgroundColor: colors.blueAccent[700],
+            },
+          }}
           onClick={() => {
             dispatch(setRegister(true));
             navigate("/login");

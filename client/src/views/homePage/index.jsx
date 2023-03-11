@@ -7,6 +7,7 @@ import Header from "components/Header";
 import { tokens } from "../../theme";
 import LineGraph from "components/LineGraph";
 import { setRegister } from "state";
+import PieGraph from "components/PieGraph";
 
 const HomePage = () => {
   const theme = useTheme();
@@ -25,7 +26,6 @@ const HomePage = () => {
         gridRow="span 2"
         display="flex"
         justifyContent="space-evenly"
-        // backgroundColor={colors.primary[400]}
       >
         <Button
           variant="contained"
@@ -104,6 +104,7 @@ const HomePage = () => {
           </Box>
         </Box>
       </Box>
+
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
@@ -112,7 +113,7 @@ const HomePage = () => {
         mt="20px"
       >
         <Box
-          gridColumn="span 12"
+          gridColumn="span 6"
           gridRow="span 3"
           backgroundColor={colors.primary[400]}
         >
@@ -144,7 +145,41 @@ const HomePage = () => {
             <BarGraph isDashboard={true} />
           </Box>
         </Box>
+        <Box
+          gridColumn="span 6"
+          gridRow="span 3"
+          backgroundColor={colors.primary[400]}
+        >
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box>
+              <Typography
+                variant="h5"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
+                Market Breakdown
+              </Typography>
+              <Typography
+                variant="h3"
+                fontWeight="bold"
+                color={colors.greenAccent[500]}
+              >
+                cryptoNites Strategic Analytics
+              </Typography>
+            </Box>
+          </Box>
+          <Box height="90%" m="-20px 0 0 0">
+            <PieGraph isDashboard={true} />
+          </Box>
+        </Box>
       </Box>
+      {/*  */}
     </Box>
   );
 };

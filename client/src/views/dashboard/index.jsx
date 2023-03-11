@@ -7,7 +7,8 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "components/Header";
 import StatCard from "components/StatCard";
-import LineGraph from "components/LineGraph";
+import BarGraph from "components/BarGraph";
+import PieGraph from "components/PieGraph";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -17,9 +18,10 @@ const Dashboard = () => {
     <Box m="20px">
       <Header title="Dashboard" subtitle="CryptoNite Accounts" />
       <Box
+        height="74vh"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="140px"
+        gridTemplateRows="repeat(4, 1fr)"
         gap="20px"
       >
         {/* ROW 1 */}
@@ -102,8 +104,8 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
         <Box
-          gridColumn="span 12"
-          gridRow="span 2"
+          gridColumn="span 4"
+          gridRow="span 3"
           backgroundColor={colors.primary[400]}
         >
           <Box
@@ -119,7 +121,48 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                Recent Fluctuations
+                Account Breakdown
+              </Typography>
+              <Typography
+                variant="h3"
+                fontWeight="bold"
+                color={colors.greenAccent[500]}
+              >
+                Your Investments
+              </Typography>
+            </Box>
+            <Box>
+              <IconButton>
+                <DownloadOutlinedIcon
+                  sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                />
+              </IconButton>
+            </Box>
+          </Box>
+          <Box height="88%" m="-20px 0 0 0">
+            <PieGraph isDashboard={true} />
+          </Box>
+        </Box>
+        {/*  */}
+        <Box
+          gridColumn="span 8"
+          gridRow="span 3"
+          backgroundColor={colors.primary[400]}
+        >
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box>
+              <Typography
+                variant="h5"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
+                Market Fluctuations
               </Typography>
               <Typography
                 variant="h3"
@@ -137,8 +180,8 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
-          <Box height="250px" m="-20px 0 0 0">
-            <LineGraph isDashboard={true} />
+          <Box height="88%" m="-20px 0 0 0">
+            <BarGraph isDashboard={true} />
           </Box>
         </Box>
       </Box>

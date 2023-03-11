@@ -82,10 +82,10 @@ export const mockBarData = [
 
 export const mockPieData = [
   {
-    id: "Ethereum",
-    label: "Ethereum",
-    value: 239,
-    color: "hsl(104, 70%, 50%)",
+    id: "Bitcoin",
+    label: "Bitcoin",
+    value: 584,
+    color: "hsl(344, 70%, 50%)",
   },
   {
     id: "Dogecoin",
@@ -106,10 +106,10 @@ export const mockPieData = [
     color: "hsl(229, 70%, 50%)",
   },
   {
-    id: "Bitcoin",
-    label: "Bitcoin",
-    value: 584,
-    color: "hsl(344, 70%, 50%)",
+    id: "Ethereum",
+    label: "Ethereum",
+    value: 239,
+    color: "hsl(104, 70%, 50%)",
   },
 ];
 

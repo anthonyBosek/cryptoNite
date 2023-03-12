@@ -3,7 +3,7 @@ import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { mockPieData as data } from "../data/mockData";
 
-const PieGraph = () => {
+const PieGraph = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -99,21 +99,14 @@ const PieGraph = () => {
           translateX: 0,
           translateY: 56,
           itemsSpacing: 0,
-          itemWidth: 100,
-          itemHeight: 18,
+          itemWidth: isDashboard ? 72 : 100,
+          itemHeight: 10,
           itemTextColor: colors.grey[200],
           itemDirection: "left-to-right",
           itemOpacity: 1,
           symbolSize: 18,
           symbolShape: "circle",
-          // effects: [
-          //   {
-          //     on: "hover",
-          //     style: {
-          //       itemTextColor: "#000",
-          //     },
-          //   },
-          // ],
+          symbolSpacing: isDashboard ? 2 : 8,
         },
       ]}
     />

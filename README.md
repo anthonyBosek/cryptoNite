@@ -61,7 +61,5 @@ npm i <packageName>
 cd client && npm i <packageName>
 ```
 
-### contributors
-
-- Jamie Frazier
+### contributor
 - Anthony Bosek

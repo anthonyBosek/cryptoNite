@@ -61,5 +61,5 @@ npm i <packageName>
 cd client && npm i <packageName>
 ```
 
-### contributor
-- Anthony Bosek
+### Contributor
+- [Anthony Bosek](anthony-bosek.vercel.app)
